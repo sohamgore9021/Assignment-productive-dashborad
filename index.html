@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Roboto+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+
+    <div class="nav">
+         <h1>Dashboard</h1>
+         <div class="navRight">
+
+            <div class="card">
+                
+                <div>
+                    <p class="bVal" id="weatherTemp">--°C</p>
+                    <p class="bSub" id="weatherDesc">Loading</p>
+                </div>
+            </div>
+
+            <div class="card">
+                
+                <div>
+                    <p class="bVal" id="clock">00:00:00</p>
+                    <p class="bSub" id="dateDisplay">--</p>
+                </div>
+            </div>
+
+            <button class="theme" id="themeBtn">Bright</button>
+
+         </div>
+    </div>
+
+    <section class="quoteBox">
+            <p id="quoteText">Loading quote</p>
+            <button id="quoteBtn" class="btn">New</button>
+        </section>
+
+    <div class="board">
+
+        <!-- <section class="quoteBox">
+            <h2>Quote</h2>
+            <p id="quoteText">Loading quote</p>
+            <button id="quoteBtn" class="btn">New Quote</button>
+        </section> -->
+
+        <section class="todoBox">
+            <h2>Todo</h2>
+            <div class="inputRow">
+                <input type="text" id="inputBox" placeholder="Add a task">
+                <button id="addBtn" class="btn">Add</button>
+            </div>
+            <ul class="todoList"></ul>
+        </section>
+
+        <section class="pomoBox">
+            <h2>Pomodoro</h2>
+            <h1 id="pomoTime">25:00</h1>
+            <div class="pomoSet">
+                <input type="number" id="pomoMin" value="25" min="1" max="90">
+                <button id="pomoSetBtn" class="btn">Set</button>
+            </div>
+            <div class="pomoBtns">
+                <button id="pomoStart" class="btn">Start</button>
+                <button id="pomoPause" class="btn">Pause</button>
+                <button id="pomoReset" class="btn">Reset</button>
+            </div>
+        </section>
+
+        <section class="planBox">
+            <h2>Daily Planner</h2>
+            <ul class="planli"></ul>
+        </section>
+
+    </div>
+
+    <div class="decorH"><img src="VECT_H_.png" alt=""></div>
+    <div class="decorV"><img src="vect_v_.png" alt=""></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

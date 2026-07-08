@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* --bg: #d2def8; */
+  --bg: url(./dark-bg.jpg);
+  --nav: rgba(5, 17, 49, 0.6);
+  --card: rgba(3, 7, 17, 0.6);
+  --text: #f8fafc;
+  --sub: #cbd5e1;
+  --accent: #125e7e;
+  --gold: #fbbf24;
+}
+
+body.light {
+  --bg: url(./day-bg.jpg);
+  --nav: rgba(178, 218, 240, 0.6);
+  --card: rgba(195, 227, 245, 0.8);
+  --text: #3d4d00;
+  --sub: #0D7915;
+  --accent: #0D7915;
+  --gold: #d4a017;
+  --daytxt:#43303000;
+}
+
+html,
+body {
+  height: -90%;
+  width: 100%;
+  /* background-color: var(--bg) 50%; */
+  transition: background-color 0.3s ease;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.nav {
+  min-height: 10vh;
+  width: 100%;
+  background-color: var(--nav);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav h1 {
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.bVal {
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bSub {
+  color: var(--gold);
+  font-size: 11px;
+}
+
+.theme {
+  padding: 8px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--card);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.theme:hover {
+  background-color: var(--gold);
+  color: #1a0101;
+}
+
+.theme:active {
+  transform: scale(0.98);
+}
+
+.board {
+  margin: 30px auto 0 auto;
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quoteBox,
+.todoBox,
+.pomoBox,
+.planBox {
+  flex: 1;
+  min-width: 260px;
+  background-color: var(--card);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.quoteBox h2,
+.todoBox h2,
+.pomoBox h2,
+.planBox h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.quoteBox {
+  text-align: center;
+  margin: 0 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.quoteBox p {
+  font-size: 15px;
+  font-style: italic;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planBox {
+  flex-basis: 100%;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.inputRow input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.todoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(128, 128, 128, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.todoList li p {
+  flex: 1;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.deleteBtn {
+  background-color: #555;
+}
+
+.doneBtn {
+  background-color: #4a7c59;
+}
+
+.pomoBox {
+  text-align: center;
+}
+
+#pomoTime {
+  font-family: "Roboto Mono", monospace;
+  font-size: 44px;
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+.pomoSet {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.pomoSet input {
+  width: 70px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pomoBtns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.planli {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.planli li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.planli li span {
+  background-color: var(--nav);
+  color: #3d4d00;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-width: 78px;
+  text-align: center;
+}
+
+.planli li input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: transparent;
+  color: rgba(128, 128, 128, 0.3);
+}
+
+.decorH {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.decorH img {
+  max-width: 1000px;
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.decorV {
+  display: none;
+}
+
+.decorV img {
+  max-width: 320px;
+  width: 90%;
+}
+
+@media (max-width: 700px) {
+  .board {
+    flex-direction: column;
+  }
+
+  .nav h1 {
+    font-size: 20px;
+  }
+
+  .decorH {
+    display: none;
+  }
+
+  .decorV {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+}
