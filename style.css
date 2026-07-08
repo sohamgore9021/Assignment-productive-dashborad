@@ -161,12 +161,18 @@ main {
   align-items: center;
   gap: 20px;
   justify-content: center;
+  padding: 2px;
 }
 
 .quoteBox p {
   font-size: 15px;
   font-style: italic;
   min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pomoBtns {
   display: flex;
   align-items: center;
   justify-content: center;
