@@ -53,12 +53,21 @@ todolist.addEventListener("click", updateTodo);
 
 async function up() {
   let res = await fetch(
-    "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata",
+    "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata"
   );
+
   let data = await res.json();
 
-  c.innerHTML = `${data.hour}:${data.minute}:${data.seconds}`;
-  d.innerHTML = `${data.dayOfWeek}, ${data.day}-${data.month}-${data.year}`;
+  c.textContent = `${data.hour}:${data.minute}:${data.seconds}`;
+  d.textContent = `${data.dayOfWeek}, ${data.day}-${data.month}-${data.year}`;
+
+  if (data.hour >= 6 && data.hour < 18) {
+    document.body.classList.add("light");
+    themeBtn.innerText = "Dark";
+  } else {
+    document.body.classList.remove("light");
+    themeBtn.innerText = "Bright";
+  }
 }
 
 up();
