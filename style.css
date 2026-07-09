@@ -271,6 +271,8 @@ main {
   width: 70px;
   padding: 8px;
   border: 1px solid #ccc;
+  background: var(--card);
+  color: #637b00;
   border-radius: 5px;
   font-size: 14px;
   text-align: center;
@@ -316,7 +318,9 @@ main {
   border-radius: 6px;
   font-size: 14px;
   background-color: transparent;
-  color: rgba(128, 128, 128, 0.3);
+  color: #607701;
+  
+  
 }
 
 .decorH {
